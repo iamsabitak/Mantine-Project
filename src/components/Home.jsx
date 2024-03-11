@@ -29,12 +29,15 @@ const Image = styled.img`
   max-width: 100%;
   border-radius: 20px;
 `;
+const DefaultParagraph = styled.div`
+  margin-bottom: 10rem;
+`;
 
 const Home = () => {
   return (
     <HomeContainer>
       <ContentContainer>
-        <div>
+        <DefaultParagraph>
           <Heading>Welcome to Our Website</Heading>
           <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut arcu
@@ -47,7 +50,7 @@ const Home = () => {
             posuere cubilia curae; In aliquet turpis a urna maximus, nec
             elementum velit luctus. Maecenas nec nunc mi.
           </Paragraph>
-        </div>
+        </DefaultParagraph>
       </ContentContainer>
       <div>
         <Image

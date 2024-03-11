@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Button, TextInput } from "@mantine/core";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const StyledTextInput = styled(TextInput)`
   margin-bottom: 20px;
@@ -23,7 +25,7 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const FormWrapper = styled.div`
+const FormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,12 +38,25 @@ const Title = styled.h1`
 `;
 
 function InputExample() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("eve.holt@reqres.in");
+  const [password, setPassword] = useState("cityslicka");
+
+  const navigate = useNavigate();
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     console.log({ email, password });
+    try {
+      const res = await axios.post("https://reqres.in/api/login", {
+        email: email,
+        password: password,
+      });
+      console.log("token:", res.data.token);
+      localStorage.setItem("token", res.data.token);
+      navigate("/home");
+    } catch (error) {
+      console.log("Error:", error);
+    }
   };
 
   return (
@@ -60,7 +75,7 @@ function InputExample() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <StyledButton onClick={onSubmitHandler}>Submit</StyledButton>
+      <StyledButton onClick={onSubmitHandler}>Login</StyledButton>
     </FormWrapper>
   );
 }

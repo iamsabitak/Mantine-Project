@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Button } from "@mantine/core";
+import { Button, Group } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -69,19 +69,21 @@ function InputExample() {
   return (
     <FormWrapper>
       <Title>Sign In</Title>
-      <StyledTextInput
-        label="Email Address"
-        placeholder="Email Address"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <StyledTextInput
-        label="Password"
-        placeholder="Password"
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+      <Group>
+        <StyledTextInput
+          label="Email Address"
+          placeholder="Email Address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <StyledTextInput
+          label="Password"
+          placeholder="Password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </Group>
       <StyledButton onClick={onSubmitHandler}>Login</StyledButton>
     </FormWrapper>
   );

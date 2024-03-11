@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import { Button } from "@mantine/core";
+import styled from "styled-components";
 
 const ServicesContainer = styled.div`
   padding: 40px;
@@ -34,7 +35,7 @@ const CardText = styled.p`
   margin-top: 10px;
 `;
 
-const LearnMoreButton = styled.a`
+const LearnMoreButton = styled(Button)`
   background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
@@ -54,19 +55,19 @@ const Services = () => {
   return (
     <ServicesContainer>
       <Heading>Our Services</Heading>
-      <div className="row">
+      <div>
         <ServiceCard className="col-md-4">
           <CardImage
             src="https://p7.hiclipart.com/preview/337/513/284/password-manager-privacy-policy-password-strength-random-password-generator-service.jpg"
             alt="Service 1"
           />
-          <div className="card-body">
+          <div>
             <CardTitle>Service 1</CardTitle>
             <CardText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
-              enim in lectus convallis tempus.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              eget enim in lectus convallis tempus.
             </CardText>
-            <LearnMoreButton href="#">Learn More</LearnMoreButton>
+            <LearnMoreButton>Learn More</LearnMoreButton>
           </div>
         </ServiceCard>
         <ServiceCard className="col-md-4">
@@ -74,16 +75,16 @@ const Services = () => {
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKY9K_lb8olBs1-CHaGJx_DMOpJBuTc_7GIsKhgpToGSszLpnSfIdPG9CDS9SzgUcjW2E&usqp=CAU"
             alt="Service 2"
           />
-          <div className="card-body">
+          <div>
             <CardTitle>Service 2</CardTitle>
             <CardText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
-              enim in lectus convallis tempus.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              eget enim in lectus convallis tempus.
             </CardText>
-            <LearnMoreButton href="#">Learn More</LearnMoreButton>
+            <LearnMoreButton>Learn More</LearnMoreButton>
           </div>
         </ServiceCard>
-        <ServiceCard className="col-md-4">
+        <ServiceCard>
           <CardImage
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYxggn3n_VnHanqYquI4yc5fQe9TclfT5-QCLq60ZNLS9q70YwtaWYkWtc04acYPBPv7s&usqp=CAU"
             alt="Service 3"
@@ -91,10 +92,10 @@ const Services = () => {
           <div>
             <CardTitle>Service 3</CardTitle>
             <CardText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
-              enim in lectus convallis tempus.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              eget enim in lectus convallis tempus.
             </CardText>
-            <LearnMoreButton href="#">Learn More</LearnMoreButton>
+            <LearnMoreButton>Learn More</LearnMoreButton>
           </div>
         </ServiceCard>
       </div>

@@ -1,12 +1,17 @@
 import { MantineProvider } from "@mantine/core";
-import InputExample from "./InputExample";
+// import InputExample from "./InputExample";
+import AppContent from "./AppContent";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <MantineProvider>
-      <h1>Vite React App with Mantine</h1>
-      <InputExample />
-    </MantineProvider>
+    <>
+      <MantineProvider>
+        <BrowserRouter>
+          <AppContent />
+        </BrowserRouter>
+      </MantineProvider>
+    </>
   );
 }
 

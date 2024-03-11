@@ -6,7 +6,11 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <>
-      <MantineProvider>
+      <MantineProvider
+        theme={{
+          primaryShade: 9,
+        }}
+      >
         <BrowserRouter>
           <AppContent />
         </BrowserRouter>

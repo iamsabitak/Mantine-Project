@@ -1,3 +1,4 @@
+import { Button } from "@mantine/core";
 import styled from "styled-components";
 
 const ContactContainer = styled.div`
@@ -40,7 +41,7 @@ const TextArea = styled.textarea`
   border-radius: 5px;
 `;
 
-const SubmitButton = styled.button`
+const SubmitButton = styled(Button)`
   background-color: #007bff;
   color: #fff;
   padding: 10px 20px;

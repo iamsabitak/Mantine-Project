@@ -1,40 +1,47 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Button, TextInput } from "@mantine/core";
+import { Button } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const StyledTextInput = styled(TextInput)`
+const FormWrapper = styled.form`
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+`;
+
+const Title = styled.h1`
+  font-size: 24px;
+  color: #333333;
   margin-bottom: 20px;
-  width: 150px;
+  text-align: center;
+`;
+
+const StyledTextInput = styled.input`
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 30px;
 `;
 
 const StyledButton = styled(Button)`
   margin-top: 20px;
-  width: 200px;
+  width: 30%;
   background-color: #4caf50;
   color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 16px;
   padding: 12px 0;
+  margin-left: 9.18rem;
   transition: background-color 0.3s ease;
 
   &:hover {
     background-color: #388e3c;
   }
-`;
-
-const FormWrapper = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const Title = styled.h1`
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333333;
 `;
 
 function InputExample() {

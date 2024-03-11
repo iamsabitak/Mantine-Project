@@ -2,10 +2,14 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledNav = styled.nav`
-  background-color: #b6bcbc;
+  background-color: #f5fbfb;
   padding: 5px;
 `;
 
+const StyledLiNav = styled.li`
+  margin-right: 10px;
+  font-size: large;
+`;
 const StyledUl = styled.ul`
   display: flex;
   list-style-type: none;
@@ -28,6 +32,9 @@ function Navbar() {
   return (
     <StyledNav>
       <StyledUl>
+        <StyledLiNav>
+          <StyledLink to="/home">Navbar</StyledLink>
+        </StyledLiNav>
         <StyledLi>
           <StyledLink to="/home">Home</StyledLink>
         </StyledLi>

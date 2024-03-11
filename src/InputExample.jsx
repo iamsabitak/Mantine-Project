@@ -18,7 +18,7 @@ function InputExample() {
           value={password}
           onChange={(event) => setPassword(event.target.value)}
         />
-       
+        <Button>Submit</Button>
       </form>
     </>
   );

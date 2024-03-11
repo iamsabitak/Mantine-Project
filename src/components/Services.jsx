@@ -1,67 +1,104 @@
+import styled from 'styled-components';
+
+const ServicesContainer = styled.div`
+  padding: 40px;
+`;
+
+const Heading = styled.h2`
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 50px;
+`;
+
+const ServiceCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+`;
+
+const CardImage = styled.img`
+  max-height: 300px;
+`;
+
+const CardTitle = styled.h5`
+  color: #333;
+  font-size: 20px;
+  margin-top: 20px;
+`;
+
+const CardText = styled.p`
+  color: #555;
+  text-align: center;
+  margin-top: 10px;
+`;
+
+const LearnMoreButton = styled.a`
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
 const Services = () => {
   return (
-    <div className="container mt-5">
-      <h2 className="text-center mb-5">Our Services</h2>
+    <ServicesContainer>
+      <Heading>Our Services</Heading>
       <div className="row">
-        <div className="col-md-4">
-          <div className="card">
-            <img
-              src="https://p7.hiclipart.com/preview/337/513/284/password-manager-privacy-policy-password-strength-random-password-generator-service.jpg"
-              height="300px"
-              className="card-img-top"
-              alt="Service 1"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Service 1</h5>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eget enim in lectus convallis tempus.
-              </p>
-              <a href="#" className="btn btn-primary">
-                Learn More
-              </a>
-            </div>
+        <ServiceCard className="col-md-4">
+          <CardImage
+            src="https://p7.hiclipart.com/preview/337/513/284/password-manager-privacy-policy-password-strength-random-password-generator-service.jpg"
+            alt="Service 1"
+          />
+          <div className="card-body">
+            <CardTitle>Service 1</CardTitle>
+            <CardText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
+              enim in lectus convallis tempus.
+            </CardText>
+            <LearnMoreButton href="#">Learn More</LearnMoreButton>
           </div>
-        </div>
-        <div className="col-md-4">
-          <div className="card">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKY9K_lb8olBs1-CHaGJx_DMOpJBuTc_7GIsKhgpToGSszLpnSfIdPG9CDS9SzgUcjW2E&usqp=CAU"
-              height="300px"
-              className="card-img-top"
-              alt="Service 2"
-            />
-            <div className="card-body">
-              <h5 className="card-title">Service 2</h5>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eget enim in lectus convallis tempus.
-              </p>
-              <a href="#" className="btn btn-primary">
-                Learn More
-              </a>
-            </div>
+        </ServiceCard>
+        <ServiceCard className="col-md-4">
+          <CardImage
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKY9K_lb8olBs1-CHaGJx_DMOpJBuTc_7GIsKhgpToGSszLpnSfIdPG9CDS9SzgUcjW2E&usqp=CAU"
+            alt="Service 2"
+          />
+          <div className="card-body">
+            <CardTitle>Service 2</CardTitle>
+            <CardText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
+              enim in lectus convallis tempus.
+            </CardText>
+            <LearnMoreButton href="#">Learn More</LearnMoreButton>
           </div>
-        </div>
-        <div className="col-md-4">
-          <div className="card">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYxggn3n_VnHanqYquI4yc5fQe9TclfT5-QCLq60ZNLS9q70YwtaWYkWtc04acYPBPv7s&usqp=CAU"
-              alt="Service 3"
-              height="300px"
-            />
-            <div>
-              <h5>Service 3</h5>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eget enim in lectus convallis tempus.
-              </p>
-              <a href="#">Learn More</a>
-            </div>
+        </ServiceCard>
+        <ServiceCard className="col-md-4">
+          <CardImage
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYxggn3n_VnHanqYquI4yc5fQe9TclfT5-QCLq60ZNLS9q70YwtaWYkWtc04acYPBPv7s&usqp=CAU"
+            alt="Service 3"
+          />
+          <div>
+            <CardTitle>Service 3</CardTitle>
+            <CardText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
+              enim in lectus convallis tempus.
+            </CardText>
+            <LearnMoreButton href="#">Learn More</LearnMoreButton>
           </div>
-        </div>
+        </ServiceCard>
       </div>
-    </div>
+    </ServicesContainer>
   );
 };
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { Button, Group } from "@mantine/core";
+import { Button, Group, TextInput } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -17,31 +17,6 @@ const Title = styled.h1`
   color: #333333;
   margin-bottom: 20px;
   text-align: center;
-`;
-
-const StyledTextInput = styled.input`
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-top: 30px;
-`;
-
-const StyledButton = styled(Button)`
-  margin-top: 20px;
-  width: 30%;
-  background-color: #4caf50;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  padding: 12px 0;
-  margin-left: 9.18rem;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #388e3c;
-  }
 `;
 
 function InputExample() {
@@ -70,21 +45,45 @@ function InputExample() {
     <FormWrapper>
       <Title>Sign In</Title>
       <Group>
-        <StyledTextInput
+        <TextInput
           label="Email Address"
           placeholder="Email Address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          styles={{
+            input: {
+              border: "1px solid grey",
+              width: "100%",
+              height: "2rem",
+              fontSize: "1rem",
+              borderRadius: "5px",
+              marginTop: "10px",
+              marginBottom: "10px",
+            },
+            label: { fontSize: "1rem" },
+          }}
         />
-        <StyledTextInput
+        <TextInput
           label="Password"
           placeholder="Password"
           type="password"
           value={password}
+          styles={{
+            input: {
+              border: "1px solid grey",
+              width: "100%",
+              height: "2rem",
+              fontSize: "1rem",
+              borderRadius: "5px",
+              marginTop: "10px",
+              marginBottom: "10px",
+            },
+            label: { fontSize: "1rem" },
+          }}
           onChange={(e) => setPassword(e.target.value)}
         />
       </Group>
-      <StyledButton onClick={onSubmitHandler}>Login</StyledButton>
+      <Button onClick={onSubmitHandler}>Login</Button>
     </FormWrapper>
   );
 }

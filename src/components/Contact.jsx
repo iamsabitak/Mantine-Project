@@ -1,5 +1,6 @@
 import { Button, Input, TextInput, Title } from "@mantine/core";
 import "@mantine/core/styles/Button.css";
+
 const Contact = () => {
   return (
     <>
@@ -63,7 +64,7 @@ const Contact = () => {
             marginLeft: "10rem",
             marginTop: "15px",
           }}
-          variant="outline"
+          variant="primary"
         >
           Submit
         </Button>

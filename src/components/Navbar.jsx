@@ -1,57 +1,35 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-
-const StyledNav = styled.nav`
-  background-color: #f5fbfb;
-  padding: 5px;
-`;
-
-const StyledLiNav = styled.li`
-  margin-right: 10px;
-  font-size: large;
-`;
-const StyledUl = styled.ul`
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-`;
-
-const StyledLi = styled.li`
-  margin-right: 10px;
-`;
-
-const StyledLink = styled(Link)`
-  color: black;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
+import { NavLink } from "react-router-dom";
+import '@mantine/core/styles/NavLink.css';
 
 function Navbar() {
+  const navLinkStyle = {
+    marginRight: '10px', // Set margin-right to 10px
+    fontSize: 'large' // Set font size to large
+  };
+
   return (
-    <StyledNav>
-      <StyledUl>
-        <StyledLiNav>
-          <StyledLink to="/home">Navbar</StyledLink>
-        </StyledLiNav>
-        <StyledLi>
-          <StyledLink to="/home">Home</StyledLink>
-        </StyledLi>
-        <StyledLi>
-          <StyledLink to="/about">About</StyledLink>
-        </StyledLi>
-        <StyledLi>
-          <StyledLink to="/services">Services</StyledLink>
-        </StyledLi>
-        <StyledLi>
-          <StyledLink to="/contact">Contact</StyledLink>
-        </StyledLi>
-        <StyledLi>
-          <StyledLink to="/" />
-        </StyledLi>
-      </StyledUl>
-    </StyledNav>
+    <nav style={{ backgroundColor: '#f5fbfb', padding: '5px' }}>
+      <ul style={{ display: 'flex', listStyleType: 'none', padding: '0' }}>
+        <li style={navLinkStyle}>
+          <NavLink to="/home" style={{ color: 'black', textDecoration: 'none' }} activeStyle={{ textDecoration: 'underline' }}>Navbar</NavLink>
+        </li>
+        <li style={{ marginRight: '10px' }}>
+          <NavLink to="/home" style={{ color: 'black', textDecoration: 'none' }} activeStyle={{ textDecoration: 'underline' }}>Home</NavLink>
+        </li>
+        <li style={{ marginRight: '10px' }}>
+          <NavLink to="/about" style={{ color: 'black', textDecoration: 'none' }} activeStyle={{ textDecoration: 'underline' }}>About</NavLink>
+        </li>
+        <li style={{ marginRight: '10px' }}>
+          <NavLink to="/services" style={{ color: 'black', textDecoration: 'none' }} activeStyle={{ textDecoration: 'underline' }}>Services</NavLink>
+        </li>
+        <li style={{ marginRight: '10px' }}>
+          <NavLink to="/contact" style={{ color: 'black', textDecoration: 'none' }} activeStyle={{ textDecoration: 'underline' }}>Contact</NavLink>
+        </li>
+        <li style={{ marginRight: '10px' }}>
+          <NavLink to="/" style={{ color: 'black', textDecoration: 'none' }} activeStyle={{ textDecoration: 'underline' }} />
+        </li>
+      </ul>
+    </nav>
   );
 }
 

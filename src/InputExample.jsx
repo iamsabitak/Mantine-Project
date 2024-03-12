@@ -1,23 +1,7 @@
 import { useState } from "react";
-import styled from "styled-components";
-import { Button, Group, TextInput } from "@mantine/core";
+import { Button, Group, Input, TextInput, Title } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
-const FormWrapper = styled.form`
-  background-color: #f9f9f9;
-  padding: 40px;
-  border-radius: 10px;
-  max-width: 400px;
-  margin: 0 auto;
-`;
-
-const Title = styled.h1`
-  font-size: 24px;
-  color: #333333;
-  margin-bottom: 20px;
-  text-align: center;
-`;
 
 function InputExample() {
   const [email, setEmail] = useState("eve.holt@reqres.in");
@@ -42,9 +26,11 @@ function InputExample() {
   };
 
   return (
-    <FormWrapper>
-      <Title>Sign In</Title>
-      <Group>
+    <Input.Wrapper>
+      <Title order={2} style={{ marginLeft: "35rem" }}>
+        Sign In
+      </Title>
+      <Group style={{ marginLeft: "25rem" }}>
         <TextInput
           label="Email Address"
           placeholder="Email Address"
@@ -53,12 +39,12 @@ function InputExample() {
           styles={{
             input: {
               border: "1px solid grey",
-              width: "100%",
+              width: "50%",
               height: "2rem",
               fontSize: "1rem",
               borderRadius: "5px",
-              marginTop: "10px",
-              marginBottom: "10px",
+              marginTop: "15px",
+              marginBottom: "15px",
             },
             label: { fontSize: "1rem" },
           }}
@@ -71,20 +57,36 @@ function InputExample() {
           styles={{
             input: {
               border: "1px solid grey",
-              width: "100%",
+              width: "50%",
               height: "2rem",
               fontSize: "1rem",
               borderRadius: "5px",
-              marginTop: "10px",
-              marginBottom: "10px",
+              marginTop: "15px",
+              marginBottom: "15px",
             },
+
             label: { fontSize: "1rem" },
           }}
           onChange={(e) => setPassword(e.target.value)}
         />
+        <Button
+          style={{
+            width: "5rem",
+            height: "2.3rem",
+            backgroundColor: "green",
+            border: "1px solid green",
+            boxShadow: "0 0 2px green",
+            borderRadius: "5px",
+            color: "white",
+            marginLeft: "10rem",
+            marginTop: "15px",
+          }}
+          onClick={onSubmitHandler}
+        >
+          Login
+        </Button>
       </Group>
-      <Button onClick={onSubmitHandler}>Login</Button>
-    </FormWrapper>
+    </Input.Wrapper>
   );
 }
 

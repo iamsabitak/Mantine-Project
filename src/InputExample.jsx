@@ -71,16 +71,10 @@ function InputExample() {
         />
         <Button
           style={{
-            width: "5rem",
-            height: "2.3rem",
-            backgroundColor: "green",
-            border: "1px solid green",
-            boxShadow: "0 0 2px green",
-            borderRadius: "5px",
-            color: "white",
             marginLeft: "10rem",
             marginTop: "15px",
           }}
+          variant="outline"
           onClick={onSubmitHandler}
         >
           Login

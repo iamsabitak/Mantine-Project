@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Group, Input, TextInput, Title } from "@mantine/core";
+import { Button, Input, TextInput, Title } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -26,11 +26,11 @@ function InputExample() {
   };
 
   return (
-    <Input.Wrapper>
+    <>
       <Title order={2} style={{ marginLeft: "35rem" }}>
         Sign In
       </Title>
-      <Group style={{ marginLeft: "25rem" }}>
+      <Input.Wrapper style={{ marginLeft: "25rem" }}>
         <TextInput
           label="Email Address"
           placeholder="Email Address"
@@ -85,8 +85,8 @@ function InputExample() {
         >
           Login
         </Button>
-      </Group>
-    </Input.Wrapper>
+      </Input.Wrapper>
+    </>
   );
 }
 

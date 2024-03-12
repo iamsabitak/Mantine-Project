@@ -41,14 +41,7 @@ const Services = () => {
                 </p>
                 <Button
                   style={{
-                    height: "2.3rem",
-                    backgroundColor: "green",
-                    border: "1px solid green",
-                    boxShadow: "0 0 2px green",
-                    borderRadius: "5px",
-                    color: "white",
-                    marginTop: "15px",
-                    marginBottom: "10px",
+                    margin: "10px",
                   }}
                   variant="primary"
                 >
@@ -88,14 +81,7 @@ const Services = () => {
                 </p>
                 <Button
                   style={{
-                    height: "2.3rem",
-                    backgroundColor: "green",
-                    border: "1px solid green",
-                    boxShadow: "0 0 2px green",
-                    borderRadius: "5px",
-                    color: "white",
-                    marginTop: "15px",
-                    marginBottom: "10px",
+                    margin: "10px",
                   }}
                   variant="primary"
                 >
@@ -135,14 +121,7 @@ const Services = () => {
                 </p>
                 <Button
                   style={{
-                    height: "2.3rem",
-                    backgroundColor: "green",
-                    border: "1px solid green",
-                    boxShadow: "0 0 2px green",
-                    borderRadius: "5px",
-                    color: "white",
-                    marginTop: "15px",
-                    marginBottom: "10px",
+                    margin: "10px",
                   }}
                   variant="primary"
                 >

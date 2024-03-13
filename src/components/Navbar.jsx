@@ -3,8 +3,17 @@ import "@mantine/core/styles/global.css";
 function Navbar() {
   return (
     <nav style={{ backgroundColor: "#f5fbfb", padding: "5px" }}>
-      <ul style={{ display: "flex", listStyleType: "none", padding: "0" }}>
-        <li style={{ marginRight: "10px", fontSize: "large" }}>
+      <ul
+        style={{
+          display: "flex",
+          listStyleType: "none",
+          padding: "0",
+          alignItems: "center",
+        }}
+      >
+        <li
+          style={{ marginRight: "20px", fontSize: "large", marginLeft: "20px" }}
+        >
           <NavLink
             to="/home"
             style={{ color: "black", textDecoration: "none" }}
@@ -13,7 +22,7 @@ function Navbar() {
             Navbar
           </NavLink>
         </li>
-        <li style={{ marginRight: "10px" }}>
+        <li style={{ marginRight: "20px" }}>
           <NavLink
             to="/home"
             style={{ color: "black", textDecoration: "none" }}
@@ -22,7 +31,7 @@ function Navbar() {
             Home
           </NavLink>
         </li>
-        <li style={{ marginRight: "10px" }}>
+        <li style={{ marginRight: "20px" }}>
           <NavLink
             to="/about"
             style={{ color: "black", textDecoration: "none" }}
@@ -31,7 +40,7 @@ function Navbar() {
             About
           </NavLink>
         </li>
-        <li style={{ marginRight: "10px" }}>
+        <li style={{ marginRight: "20px" }}>
           <NavLink
             to="/services"
             style={{ color: "black", textDecoration: "none" }}
@@ -40,7 +49,7 @@ function Navbar() {
             Services
           </NavLink>
         </li>
-        <li style={{ marginRight: "10px" }}>
+        <li style={{ marginRight: "20px" }}>
           <NavLink
             to="/contact"
             style={{ color: "black", textDecoration: "none" }}
@@ -49,7 +58,7 @@ function Navbar() {
             Contact
           </NavLink>
         </li>
-        <li style={{ marginRight: "10px" }}>
+        <li style={{ marginRight: "20px" }}>
           <NavLink
             to="/"
             style={{ color: "black", textDecoration: "none" }}

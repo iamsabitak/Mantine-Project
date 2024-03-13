@@ -3,7 +3,7 @@ import { Container, Group, Image, Text, Title } from "@mantine/core";
 const Home = () => {
   return (
     <Container style={{ display: "flex", marginTop: "-4rem" }}>
-      <Group style={{ marginTop: "10rem" }}>
+      <Group style={{ marginTop: "10rem", marginLeft: "2rem" }}>
         <Title style={{ marginBottom: "20px", fontSize: "24px" }}>
           Welcome to Our Website
         </Title>

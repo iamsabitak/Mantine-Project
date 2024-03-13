@@ -13,12 +13,30 @@ import "@mantine/core/styles/UnstyledButton.css"; // to style the UnstyledButton
 function MultiSelectComp() {
   const [value, setValue] = useState([]);
 
-  const options = ["Kathmandu", "Pokhara", "Biratnagar", "Birgunj"];
+  const options = [
+    "Nepal",
+    "South Korea",
+    "China",
+    "Thailand",
+    "Japan",
+    "Canada",
+    "Australia",
+    "USA",
+    "London",
+    "Germany",
+    "Brazil",
+    "India",
+    "France",
+    "Italy",
+    "Spain",
+    "Russia",
+    "South Africa",
+  ];
 
   return (
     <>
       <MultiSelect
-        label="Your favorite City"
+        label="Your favorite Country"
         placeholder="Pick value"
         data={options}
         value={value}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MultiSelect } from "@mantine/core";
+import { Chip, Group, MultiSelect, Paper } from "@mantine/core";
 import "@mantine/core/styles/global.css"; // for global style
 import "@mantine/core/styles/Combobox.css"; // style the big tick marks
 import "@mantine/core/styles/Input.css"; // for input style
@@ -33,6 +33,13 @@ function MultiSelectComp() {
     "South Africa",
   ];
 
+  const handleRemove = (removedCountry) => {
+    const updatedValue = value.filter(
+      (_, country) => country !== removedCountry
+    );
+    setValue(updatedValue);
+  };
+
   return (
     <div
       style={{
@@ -63,6 +70,28 @@ function MultiSelectComp() {
           }}
         />
       </div>
+      <Paper style={{ marginTop: "4rem", padding: "5px" }}>
+        <Group>
+          {value.map((country) => (
+            <Chip
+              key={country}
+              style={{
+                marginRight: "10px",
+                marginLeft: "4rem",
+              }}
+            >
+              {country}{" "}
+              <span
+                onClick={() => handleRemove(country)}
+                style={{ cursor: "pointer" }}
+              >
+                {" "}
+                &#x2716;
+              </span>
+            </Chip>
+          ))}
+        </Group>
+      </Paper>
     </div>
   );
 }

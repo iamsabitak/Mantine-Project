@@ -1,5 +1,7 @@
 import { NavLink } from "@mantine/core";
 
+import { Link } from "react-router-dom";
+
 import "@mantine/core/styles/global.css";
 import "@mantine/core/styles/NavLink.css";
 
@@ -16,7 +18,8 @@ function Navbar() {
       >
         <NavLink
           label="Navbar"
-          href="/home"
+          to="/home"
+          component={Link}
           style={{
             textDecoration: "none",
             marginLeft: "1rem",
@@ -27,25 +30,29 @@ function Navbar() {
 
         <NavLink
           label="Home"
-          href="/home"
+          to="/home"
+          component={Link}
           style={{ textDecoration: "none", color: "black" }}
         />
 
         <NavLink
           label="About"
-          href="/about"
+          to="/about"
+          component={Link}
           style={{ textDecoration: "none", color: "black" }}
         />
 
         <NavLink
           label="Services"
-          href="/services"
+          to="/services"
+          component={Link}
           style={{ textDecoration: "none", color: "black" }}
         />
 
         <NavLink
           label="Contact"
-          href="/contact"
+          to="/contact"
+          component={Link}
           style={{ textDecoration: "none", color: "black" }}
         />
       </ul>

@@ -36,7 +36,7 @@ function MultiSelectComp() {
       }}
     >
       <div
-        style={{ marginLeft: "3rem", maxWidth: "300px", marginRight: "5rem" }}
+        style={{ marginLeft: "3.9rem", maxWidth: "300px", marginRight: "5rem" }}
       >
         <MultiSelect
           label="Your favorite Country"
@@ -58,7 +58,6 @@ function MultiSelectComp() {
             pill: { display: "none" },
             section: { display: "none" },
             dropdown: {
-              border: "1px solid #A8A8A8",
               borderRadius: "5px",
               marginLeft: "2.8rem",
             },
@@ -66,10 +65,14 @@ function MultiSelectComp() {
               margin: "1rem",
               marginTop: "4px",
               cursor: "pointer",
+              border: "1px solid #A8A8A8",
+              borderRadius: "3px",
+              width: "100%",
             },
             option: {
-              marginTop: "10px",
-              // borderTop: "1px solid #A8A8A8",
+              border: "1px solid #A8A8A8",
+              padding: "10px",
+              textAlign: "center",
             },
           }}
         />

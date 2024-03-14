@@ -64,28 +64,6 @@ function MultiSelectComp() {
           }}
         />
       </div>
-      {/* <Paper style={{ marginTop: "4rem", padding: "5px" }}>
-        <Group>
-          {value.map((country) => (
-            <Pill
-              key={country}
-              style={{
-                marginRight: "10px",
-                marginLeft: "4rem",
-              }}
-            >
-              {country}{" "}
-              <span
-                onClick={() => handleRemove(country)}
-                style={{ cursor: "pointer" }}
-              >
-                {" "}
-                &#x2716;
-              </span>
-            </Pill>
-          ))}
-        </Group>
-      </Paper> */}
       <PaperChipComp value={value} setValue={setValue} />
     </div>
   );

@@ -49,11 +49,11 @@ function MultiSelectComp() {
           nothingFoundMessage="Nothing found..."
           hidePickedOptions
           styles={{
+            inputField: { width: "18rem", height: "2rem", fontSize: "1rem",marginTop: "1rem", },
             label: {
-              marginLeft: "6px",
-              marginBottom: "1rem",
-              marginTop: "1rem",
-              fontSize: "15px",
+              marginLeft: "3rem",
+
+              fontSize: "1.3rem",
             },
             pill: { display: "none" },
             section: { display: "none" },

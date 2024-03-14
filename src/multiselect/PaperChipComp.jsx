@@ -8,7 +8,7 @@ function PaperChipComp({ value, setValue }) {
   };
 
   return (
-    <Paper mt={"1rem"} p={"3rem"} mr={"1rem"}>
+    <Paper mt={"10px"} p={"3rem"} mr={"1rem"}>
       <Group>
         {value.map((country) => (
           <Badge
@@ -19,6 +19,8 @@ function PaperChipComp({ value, setValue }) {
             style={{
               borderRadius: "2rem",
               display: "inline-block",
+              marginTop: "10px",
+              marginLeft: "10px",
             }}
           >
             <span style={{ margin: "8px", fontSize: "14px" }}>

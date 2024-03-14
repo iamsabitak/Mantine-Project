@@ -55,10 +55,10 @@ function MultiSelectComp() {
           hidePickedOptions
           styles={{
             label: {
-              marginLeft: "3rem",
+              marginLeft: "1rem",
               marginBottom: "1rem",
               marginTop: "1rem",
-              fontSize: "18px",
+              fontSize: "15px",
             },
             pill: { display: "none" },
           }}

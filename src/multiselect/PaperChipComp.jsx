@@ -1,7 +1,7 @@
-
 /* eslint-disable react/prop-types */
 import { Group, Paper, Pill } from "@mantine/core";
 
+import "@mantine/core/styles/global.css";
 import "@mantine/core/styles/Pill.css"; // to make button type those which are added
 import "@mantine/core/styles/chip.css";
 import "@mantine/core/styles/Group.css";

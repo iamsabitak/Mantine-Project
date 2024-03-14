@@ -1,12 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Group, Paper, Pill } from "@mantine/core";
-
-import "@mantine/core/styles/global.css";
-import "@mantine/core/styles/Pill.css"; // to make button type those which are added
-import "@mantine/core/styles/chip.css";
-import "@mantine/core/styles/Group.css";
-import "@mantine/core/styles/UnstyledButton.css";
-import "@mantine/core/styles/UnstyledButton.css"; // to style the UnstyledButton {cross marks}
+import { Badge, Group, Paper } from "@mantine/core";
 
 function PaperChipComp({ value, setValue }) {
   const handleRemove = (removedCountry) => {
@@ -15,25 +8,32 @@ function PaperChipComp({ value, setValue }) {
   };
 
   return (
-    <Paper style={{ marginTop: "4rem", padding: "5px" }}>
+    <Paper mt={"1rem"} p={"3rem"} mr={"1rem"}>
       <Group>
         {value.map((country) => (
-          <Pill
+          <Badge
+            mr={"1rem"}
+            mb={"1rem"}
+            bg={"	#A8A8A8"}
             key={country}
             style={{
-              marginRight: "10px",
-              marginLeft: "4rem",
+              borderRadius: "2rem",
+              display: "inline-block",
             }}
           >
-            {country}{" "}
-            <span
-              onClick={() => handleRemove(country)}
-              style={{ cursor: "pointer" }}
-            >
-              {" "}
-              &#x2716;
+            <span style={{ margin: "8px", fontSize: "14px" }}>
+              {country}
+              <span
+                onClick={() => handleRemove(country)}
+                style={{
+                  cursor: "pointer",
+                  marginLeft: "5px",
+                }}
+              >
+                &#x2716;
+              </span>
             </span>
-          </Pill>
+          </Badge>
         ))}
       </Group>
     </Paper>

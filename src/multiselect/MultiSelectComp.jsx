@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Chip, Group, MultiSelect, Paper } from "@mantine/core";
+import { Group, MultiSelect, Paper, Pill } from "@mantine/core";
 import "@mantine/core/styles/global.css"; // for global style
 import "@mantine/core/styles/Combobox.css"; // style the big tick marks
 import "@mantine/core/styles/Input.css"; // for input style
@@ -34,9 +34,7 @@ function MultiSelectComp() {
   ];
 
   const handleRemove = (removedCountry) => {
-    const updatedValue = value.filter(
-      (_, country) => country !== removedCountry
-    );
+    const updatedValue = value.filter((country) => country !== removedCountry);
     setValue(updatedValue);
   };
 
@@ -58,8 +56,7 @@ function MultiSelectComp() {
           maxValues={10}
           searchable
           nothingFoundMessage="Nothing found..."
-          hideValue
-          // hidePickedOptions  //should i hide the selected option or not
+          hidePickedOptions
           styles={{
             label: {
               marginLeft: "3rem",
@@ -67,13 +64,14 @@ function MultiSelectComp() {
               marginTop: "1rem",
               fontSize: "18px",
             },
+            pill: { display: "none" },
           }}
         />
       </div>
       <Paper style={{ marginTop: "4rem", padding: "5px" }}>
         <Group>
           {value.map((country) => (
-            <Chip
+            <Pill
               key={country}
               style={{
                 marginRight: "10px",
@@ -88,7 +86,7 @@ function MultiSelectComp() {
                 {" "}
                 &#x2716;
               </span>
-            </Chip>
+            </Pill>
           ))}
         </Group>
       </Paper>
